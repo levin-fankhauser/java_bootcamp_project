@@ -93,6 +93,7 @@ public class Main {
         }
 
         String username = lineArray[0];
+        String password = lineArray[1];
         double task1 = Double.parseDouble(lineArray[2]);
         double task2 = Double.parseDouble(lineArray[3]);
         double task3 = Double.parseDouble(lineArray[4]);
@@ -102,7 +103,7 @@ public class Main {
         String checkWorktime = Terminal.askString("Do you want to add worktime: [y/n]");
 
         if (checkWorktime.equalsIgnoreCase("y")) {
-            addWorktime(username, task1, task2, task3, actualLine);
+            addWorktime(username, task1, task2, task3, actualLine, password);
         }
 
         String checkStatistics = Terminal.askString("Do you want to see your statistics: [y/n]");
@@ -112,7 +113,7 @@ public class Main {
         }
     }
 
-    public static void addWorktime(String username, double task1_old, double task2_old, double task3_old, int actualLine) throws IOException {
+    public static void addWorktime(String username, double task1_old, double task2_old, double task3_old, int actualLine, String password) throws IOException {
         String myffilePath = "resources/worktime.csv";
         File myFile = new File(myffilePath);
         List<String> allLines = Files.readAllLines(myFile.toPath());
@@ -126,7 +127,7 @@ public class Main {
         double task3 = Terminal.askDouble("How many hours did you work on task 3: ");
         task3 = task3_old + task3;
 
-        String promt = (username+";"+task1+";"+task2+";"+task3);
+        String promt = (username+";"+username+";"+task1+";"+task2+";"+task3);
 
         FileWriter writer = new FileWriter(myFile, true);
         allLines.set(actualLine, promt);
