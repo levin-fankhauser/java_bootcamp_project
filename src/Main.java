@@ -14,12 +14,10 @@ public class Main {
 
     public static void login() throws IOException {
         String myffilePath = "resources/worktime.csv";
-
         File myFile = new File(myffilePath);
-
         List<String> allLines = Files.readAllLines(myFile.toPath());
 
-        Terminal.askString("");
+        String username = Terminal.askString("Username: ");
 
         //Abfrage des Benutzers
         String[] lineArray = new String[4];
@@ -27,14 +25,13 @@ public class Main {
         for (int i = 0; i < allLines.size(); i++) {
             String line = allLines.get(i);
             lineArray = line.split(";");
-            if (lineArray[0].equals("Levin")) {
+            if (lineArray[0].equals(username)) {
                 break;
             }
         }
 
-        for (int i = 0; i < lineArray.length; i++) {
-            System.out.println(lineArray[i]);
-        }
+
+
     }
 
     public static void addWorktime() {
