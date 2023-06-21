@@ -135,6 +135,8 @@ public class Main {
 
     public static void showStatistics(double task1, double task2, double task3) {
         double total = task1 + task2 + task3;
-        System.out.println("Task 1");
+        System.out.println("Task 1: " + Math.round(100 / total * task1) + "%");
+        System.out.println("Task 2: " + Math.round(100 / total * task2) + "%");
+        System.out.println("Task 3: " + Math.round(100 / total * task3) + "%");
     }
 }
