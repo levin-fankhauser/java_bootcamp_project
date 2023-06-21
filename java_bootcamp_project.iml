@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../jar_lib/Terminal.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../JAR_LIB/Terminal.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

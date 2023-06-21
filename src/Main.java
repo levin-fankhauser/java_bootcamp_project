@@ -5,14 +5,39 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        while (true) {
 
+            System.out.println("Your options: \n1 - Log in \n2 - Add User \n3 - Close program");
+            int selection = Terminal.askInt("Selection (only write the number): ");
+
+            switch (selection) {
+                case 1:
+                    login();
+                    break;
+                case 2:
+                    createUser();
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Please enter a valid option! \n");
+                    break;
+            }
+
+        }
     }
+
 
     public static void createUser() {
 
     }
 
     public static void login() throws IOException {
+
+        String username = Terminal.askString("Username: ");
+        String password = Terminal.askString("Password: ");
+
         String myffilePath = "resources/worktime.csv";
 
         File myFile = new File(myffilePath);
