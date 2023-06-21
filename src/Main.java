@@ -104,6 +104,12 @@ public class Main {
         if (checkWorktime.equalsIgnoreCase("y")) {
             addWorktime(username, task1, task2, task3, actualLine);
         }
+
+        String checkStatistics = Terminal.askString("Do you want to see your statistics: [y/n]");
+
+        if (checkWorktime.equalsIgnoreCase("y")) {
+            addWorktime(username, task1, task2, task3, actualLine);
+        }
     }
 
     public static void addWorktime(String username, double task1_old, double task2_old, double task3_old, int actualLine) throws IOException {
@@ -127,7 +133,7 @@ public class Main {
         Files.write(myFile.toPath(), allLines, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
-    public static void showDiagram() {
+    public static void showStatistics() {
 
     }
 }
