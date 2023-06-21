@@ -5,6 +5,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+
+    }
+
+    public static void createUser() {
+
+    }
+
+    public static void login() throws IOException {
         String myffilePath = "resources/worktime.csv";
 
         File myFile = new File(myffilePath);
@@ -24,5 +32,13 @@ public class Main {
         for (int i = 0; i < lineArray.length; i++) {
             System.out.println(lineArray[i]);
         }
+    }
+
+    public static void addWorktime() {
+
+    }
+
+    public static void showDiagram() {
+
     }
 }
