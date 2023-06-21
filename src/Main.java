@@ -8,9 +8,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        while (true) {
 
-            System.out.println("Your options: \n1 - Log in \n2 - Add User \n3 - Close program");
+        while (true) {
+            System.out.println("\nYour options: \n1 - Log in \n2 - Add User \n3 - Close program");
             int selection = Terminal.askInt("Selection (only write the number): ");
 
             switch (selection) {
@@ -18,28 +18,50 @@ public class Main {
                     login();
                     break;
                 case 2:
-                    createUser();
+                    createUser1();
                     break;
                 case 3:
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Please enter a valid option! \n");
+                    System.out.println("Please enter a valid option!");
                     break;
             }
-
         }
     }
 
 
-    public static void createUser() throws IOException {
-        String myffilePath = "resources/worktime.csv";
-        File myFile = new File(myffilePath);
+    public static void createUser1() throws IOException {
+        System.out.println("Do you want to add a new user?");
+        char selection = Terminal.askChar("Selection (y or n): ");
 
-        FileWriter writer = new FileWriter(myFile, true);
-        writer.write("\n neue Eingabe!?");
-        writer.flush();
+        switch (selection) {
+            case 'n':
+                return;
+            case 'y':
+                createUser2();
+                break;
+            default:
+                System.out.println("Please enter a valid option! \n");
+                createUser1();
+                break;
+        }
     }
+
+        public static void createUser2() throws IOException {
+            String myffilePath = "resources/worktime.csv";
+            File myFile = new File(myffilePath);
+
+            String username = Terminal.askString("New username: ");
+            String password = Terminal.askString("New password: ");
+
+            FileWriter writer = new FileWriter(myFile, true);
+            writer.write(username+";"+password+";0;0;0\n");
+            writer.flush();
+
+        }
+
+
 
     public static void login() throws IOException {
 
