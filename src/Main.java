@@ -107,8 +107,8 @@ public class Main {
 
         String checkStatistics = Terminal.askString("Do you want to see your statistics: [y/n]");
 
-        if (checkWorktime.equalsIgnoreCase("y")) {
-            addWorktime(username, task1, task2, task3, actualLine);
+        if (checkStatistics.equalsIgnoreCase("y")) {
+            showStatistics();
         }
     }
 
