@@ -8,7 +8,7 @@ public class Files_rwx {
     public static void main(String[] args) throws IOException {
 
         //Einlesen
-        String myffilePath = "resources/questionsAnswersFile.csv";
+        String myffilePath = "resources/worktime.csv";
 
         File myFile = new File(myffilePath);
         System.out.println(myFile.getAbsoluteFile());
