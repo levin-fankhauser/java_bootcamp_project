@@ -127,7 +127,7 @@ public class Main {
         double task3 = Terminal.askDouble("How many hours did you work on task 3: ");
         task3 = task3_old + task3;
 
-        String promt = (username+";"+username+";"+task1+";"+task2+";"+task3);
+        String promt = (username+";"+password+";"+task1+";"+task2+";"+task3);
 
         FileWriter writer = new FileWriter(myFile, true);
         allLines.set(actualLine, promt);
