@@ -108,7 +108,7 @@ public class Main {
         String checkStatistics = Terminal.askString("Do you want to see your statistics: [y/n]");
 
         if (checkStatistics.equalsIgnoreCase("y")) {
-            showStatistics();
+            showStatistics(task1, task2, task3);
         }
     }
 
@@ -133,7 +133,8 @@ public class Main {
         Files.write(myFile.toPath(), allLines, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
-    public static void showStatistics() {
-
+    public static void showStatistics(double task1, double task2, double task3) {
+        double total = task1 + task2 + task3;
+        System.out.println("Task 1");
     }
 }
