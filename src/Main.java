@@ -36,9 +36,6 @@ public class Main {
 
     public static void login() throws IOException {
 
-        String username = Terminal.askString("Username: ");
-        String password = Terminal.askString("Password: ");
-
         String myffilePath = "resources/worktime.csv";
         File myFile = new File(myffilePath);
         List<String> allLines = Files.readAllLines(myFile.toPath());
