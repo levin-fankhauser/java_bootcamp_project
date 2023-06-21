@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        login();
+
     }
 
     public static void createUser() {
@@ -29,6 +29,9 @@ public class Main {
             lineArray = line.split(";");
             if (lineArray[0].equals(checkUsername) && lineArray[1].equals(checkPassword)) {
                 break;
+            } else {
+                System.out.println("Username or Password not valid!");
+                return;
             }
         }
 
