@@ -19,6 +19,9 @@ public class Main {
 
         List<String> allLines = Files.readAllLines(myFile.toPath());
 
+        Terminal.askString("");
+
+        //Abfrage des Benutzers
         String[] lineArray = new String[4];
 
         for (int i = 0; i < allLines.size(); i++) {
