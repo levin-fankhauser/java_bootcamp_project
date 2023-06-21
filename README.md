@@ -1,2 +1,3 @@
 # java_bootcamp_project
-Java Bootcamp Projekt Coop | Lorenz Boss und Levin Fankhauser
+Java Bootcamp Projekt CoopM von Lorenz Boss und Levin Fankhauser
+

@@ -4,6 +4,6 @@ public class Testing_GIT {
     }
 
     public static void test() {
-        System.out.println();
+        System.out.println("Lorenz");
     }
 }
