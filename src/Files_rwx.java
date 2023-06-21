@@ -9,8 +9,8 @@ public class Files_rwx {
 
         //Einlesen
         String myffilePath = "resources/worktime.csv";
-
         File myFile = new File(myffilePath);
+
         System.out.println(myFile.getAbsoluteFile());
 
         //Ausgeben

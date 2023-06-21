@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.sql.SQLOutput;
@@ -30,8 +31,13 @@ public class Main {
     }
 
 
-    public static void createUser() {
+    public static void createUser() throws IOException {
+        String myffilePath = "resources/worktime.csv";
+        File myFile = new File(myffilePath);
 
+        FileWriter writer = new FileWriter(myFile, true);
+        writer.write("\n neue Eingabe!?");
+        writer.flush();
     }
 
     public static void login() throws IOException {
