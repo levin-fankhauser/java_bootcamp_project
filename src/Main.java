@@ -99,7 +99,11 @@ public class Main {
 
         System.out.println("Activity from user " + username + "\nTask1: " + task1 + "h\nTask2: " + task2 + "h\nTask3: " + task3 + "h");
 
-        addWorktime(username, task1, task2, task3, actualLine);
+        String checkWorktime = Terminal.askString("Do you want to add worktime: [y/n]");
+
+        if (checkWorktime.equalsIgnoreCase("y")) {
+            addWorktime(username, task1, task2, task3, actualLine);
+        }
     }
 
     public static void addWorktime(String username, double task1_old, double task2_old, double task3_old, int actualLine) throws IOException {
