@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.sql.SQLOutput;
 import java.util.List;
 
 public class Main {
@@ -17,7 +18,7 @@ public class Main {
         File myFile = new File(myffilePath);
         List<String> allLines = Files.readAllLines(myFile.toPath());
 
-        String username = Terminal.askString("Username: ");
+        String checkUsername = Terminal.askString("Username: ");
 
         //Abfrage des Benutzers
         String[] lineArray = new String[4];
@@ -25,12 +26,17 @@ public class Main {
         for (int i = 0; i < allLines.size(); i++) {
             String line = allLines.get(i);
             lineArray = line.split(";");
-            if (lineArray[0].equals(username)) {
+            if (lineArray[0].equals(checkUsername)) {
                 break;
             }
         }
 
+        String username = lineArray[0];
+        double task1 = Double.parseDouble(lineArray[1]);
+        double task2 = Double.parseDouble(lineArray[2]);
+        double task3 = Double.parseDouble(lineArray[3]);
 
+        System.out.println("Activity from user " + username + "\nTask1: " + task1 + "h\nTask2: " + task2 + "h\nTask3: " + task3 + "h");
 
     }
 
