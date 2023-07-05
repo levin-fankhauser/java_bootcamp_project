@@ -1,7 +1,6 @@
 username;password;hours1;hours2;hours3
 levin;1a2b;7.5;11.0;21.0
-lorenz;password1;5.0;8.0;12.0
+lorenz;password1;12.0;12.0;12.0
 cem;password2;3;8;12
 tobias;password3;3;8;12
 root;root;12.0;13.0;16.0
-null;null;30.0;0.0;0.0
