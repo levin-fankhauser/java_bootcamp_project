@@ -1,11 +1,7 @@
 username;password;hours1;hours2;hours3
 levin;1a2b;7.5;11.0;21.0
-lorenz;password1;117.0;112.0;216.0
+lorenz;password1;5.0;8.0;12.0
 cem;password2;3;8;12
 tobias;password3;3;8;12
 root;root;12.0;13.0;16.0
-floros;beook;4.0;2.0;0.0
-Ady;coopilot;0;0;0
-null;null;0;0;0
-null;null;0;0;0
-null;null;0;0;0
+null;null;30.0;0.0;0.0
