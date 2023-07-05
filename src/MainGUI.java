@@ -20,7 +20,7 @@ public class MainGUI extends JFrame implements ActionListener {
     public MainGUI() {
         setTitle("Zeiterfassung");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(400, 200));
+        setPreferredSize(new Dimension(800, 100));
         setLayout(new FlowLayout());
 
         usernameLabel = new JLabel("Username:");
