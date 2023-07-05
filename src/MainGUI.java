@@ -45,6 +45,14 @@ public class MainGUI extends JFrame implements ActionListener {
 
         pack();
         setVisible(true);
+
+        // Set the Look and Feel to the system's dark mode
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            SwingUtilities.updateComponentTreeUI(this);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
