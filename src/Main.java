@@ -129,7 +129,6 @@ public class Main {
 
         String promt = (username+";"+password+";"+task1+";"+task2+";"+task3);
 
-        FileWriter writer = new FileWriter(myFile, true);
         allLines.set(actualLine, promt);
         Files.write(myFile.toPath(), allLines, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
