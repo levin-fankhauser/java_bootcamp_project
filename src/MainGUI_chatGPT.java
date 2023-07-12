@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
 
-public class MainGUI extends JFrame implements ActionListener {
+public class MainGUI_chatGPT extends JFrame implements ActionListener {
     private static final String FILE_PATH = "resources/worktime.csv";
 
     private JLabel usernameLabel;
@@ -17,7 +17,7 @@ public class MainGUI extends JFrame implements ActionListener {
     private JButton loginButton;
     private JButton createUserButton;
 
-    public MainGUI() {
+    public MainGUI_chatGPT() {
         setTitle("Zeiterfassung");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(650, 75));
@@ -58,7 +58,7 @@ public class MainGUI extends JFrame implements ActionListener {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new MainGUI();
+                new MainGUI_chatGPT();
             }
         });
     }
