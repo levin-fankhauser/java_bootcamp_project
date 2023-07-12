@@ -5,7 +5,7 @@ public class MainGUI {
     public static void main(String[] args) {
         JFrame window=new JFrame("Work Logging App");
 
-        JButton login=new JButton("login");
+        JButton login=new JButton("LOGIN");
         login.setBounds(130,100,100, 40);
 
         window.add(login);
