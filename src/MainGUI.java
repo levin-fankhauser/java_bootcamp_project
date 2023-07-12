@@ -3,15 +3,15 @@ import java.time.LocalTime;
 
 public class MainGUI {
     public static void main(String[] args) {
-        JFrame f=new JFrame();
+        JFrame window=new JFrame("Work Logging App");
 
-        JButton b=new JButton("click");
-        b.setBounds(130,100,100, 40);
+        JButton login=new JButton("login");
+        login.setBounds(130,100,100, 40);
 
-        f.add(b);
+        window.add(login);
 
-        f.setSize(400,500);
-        f.setLayout(null);
-        f.setVisible(true);
+        window.setSize(400,500);
+        window.setLayout(null);
+        window.setVisible(true);
     }
 }
